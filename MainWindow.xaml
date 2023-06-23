@@ -1,0 +1,22 @@
+﻿<Window x:Class="midterm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:local="clr-namespace:midterm"
+        
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF5690A5">
+        <Button x:Name="btnAddProduct" Content="product " HorizontalAlignment="Left" Margin="366,356,0,0" VerticalAlignment="Top" Width="108" Height="35" Click="btnAddProduct_Click"/>
+        <Button x:Name="btnAddMember_" Content="member " HorizontalAlignment="Left" Margin="516,354,0,0" VerticalAlignment="Top" Height="43" Width="110" Click="btnAddMember__Click"/>
+        <RichTextBox  Margin="0,0,405,163">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="rbtDisplay"  Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
