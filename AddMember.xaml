@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:midterm"
         mc:Ignorable="d"
         Title="AddMember" Height="450" Width="800">
-    <Grid Background="#FF3A2261">
-        
+    <Grid Background="#FF9589A7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="63*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="lbPreviousTransaction" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="261,92,30,61" Grid.RowSpan="2" Grid.Column="1"/>
+        <ListBox x:Name="lbmembers" Grid.RowSpan="2" Margin="33,20,369,62" SelectionChanged="lbmembers_SelectionChanged" Grid.Column="1"/>
+        <Button x:Name="btntestAddmem" Content="Button" HorizontalAlignment="Left" Margin="267,166,0,0" Grid.Row="1" VerticalAlignment="Top" Click="btntestAddmem_Click" Height="36" Width="341" Grid.Column="1"/>
+        <Label Content="Transaction history " HorizontalAlignment="Left" Margin="281,39,0,0" VerticalAlignment="Top" Height="39" Width="245" FontSize="24" FontFamily="Segoe UI Emoji" Grid.Column="1"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="28,12,0,0" VerticalAlignment="Top" Width="111" FontSize="20"/>
+        <Label Content="Last Name " HorizontalAlignment="Left" Margin="24,77,0,0" VerticalAlignment="Top" Width="108" FontSize="20"/>
+        <TextBox x:Name="txtmemFirstname_" HorizontalAlignment="Left" Margin="34,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMemLastName" HorizontalAlignment="Left" Margin="27,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Canvas Margin="2,14,615,59" Grid.Row="1" Background="#FFA29191" Grid.ColumnSpan="2">
+            <Label Content="Regular Member " Width="100" HorizontalAlignment="Left" Canvas.Left="71" Canvas.Top="41" VerticalAlignment="Top"/>
+            <Label Content="Gold Member" Width="86" HorizontalAlignment="Left" Canvas.Left="78" Canvas.Top="85" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbRegularmember_" Content="" HorizontalAlignment="Left" Canvas.Left="35" Canvas.Top="45" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Checked="rbRegularmember__Checked"/>
+        </Canvas>
+        <RadioButton x:Name="rbGoldmember_" Content="" HorizontalAlignment="Left" Margin="34,0,0,0" Grid.Row="1" VerticalAlignment="Center" Checked="rbGoldmember__Checked"/>
+
     </Grid>
 </Window>

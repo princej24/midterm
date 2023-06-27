@@ -14,12 +14,13 @@ namespace midterm
 
         public override void AddPoints(Product product)
         {
-            throw new NotImplementedException();
+            Points += product.Points;
         }
 
         public override void DeductPoints(Product product)
         {
-            throw new NotImplementedException();
+            Points -= product.Points;
+
         }
     }
 }

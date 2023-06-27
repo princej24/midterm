@@ -15,22 +15,19 @@ namespace midterm
         int _sku;
         double _price;
         int _points;
+        
         static int _numberOfProduct;
 
-      
+        public int Points { get => _points; set => _points = value; }
 
-      public  Product(string name, double price, int points)
+        public  Product(string name, double price, int points)
         {
             _name = name;
             
             _price = price;
             _points = points;
 
-
-
-
-
-            _sku = rand.Next(1000000, 1000000);
+            _sku = rand.Next(100000, 999999);
         }
 
         public override string ToString()

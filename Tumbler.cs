@@ -8,7 +8,7 @@ namespace midterm
 {
     public class Tumbler : Merchandise
     {
-        public Tumbler(string name, double price, int points) : base(name, price, points)
+        public Tumbler(string name, double price, int points, string color) : base(name, price, points)
         {
         }
     }

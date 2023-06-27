@@ -8,8 +8,13 @@ namespace midterm
 {
     public class Lunch : Food
     {
-        public Lunch(string name, double price, int points) : base(name, price, points)
+        
+
+        public Lunch(string name, double price, int points, bool heated) : base(name, price, points)
         {
+           
         }
+
+        
     }
 }

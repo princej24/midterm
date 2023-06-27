@@ -7,13 +7,18 @@
         xmlns:local="clr-namespace:midterm"
         
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF5690A5">
-        <Button x:Name="btnAddProduct" Content="product " HorizontalAlignment="Left" Margin="366,356,0,0" VerticalAlignment="Top" Width="108" Height="35" Click="btnAddProduct_Click"/>
-        <Button x:Name="btnAddMember_" Content="member " HorizontalAlignment="Left" Margin="516,354,0,0" VerticalAlignment="Top" Height="43" Width="110" Click="btnAddMember__Click"/>
-        <RichTextBox  Margin="0,0,405,163">
+    <Grid Background="#FF2B3D44">
+        <Button x:Name="btnAddProduct" Content="product " HorizontalAlignment="Left" Margin="17,311,0,0" VerticalAlignment="Top" Width="108" Height="35" Click="btnAddProduct_Click"/>
+        <Button x:Name="btnAddMember_" Content="member " HorizontalAlignment="Left" Margin="178,311,0,0" VerticalAlignment="Top" Height="43" Width="110" Click="btnAddMember__Click"/>
+        <ListBox x:Name="lbPreviousTransactions" Margin="585,0,0,133"/>
+        <ListBox x:Name="lBProducts" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="362,5,228,122" SelectionChanged="lBProducts_SelectionChanged"/>
+        <ComboBox x:Name="cbMembers" HorizontalAlignment="Left" Margin="609,310,0,0" VerticalAlignment="Top" Width="165" Height="21" SelectionChanged="cbMembers_SelectionChanged"/>
+        <Button x:Name="btBuy_product_" Content="buy product " HorizontalAlignment="Left" Margin="486,357,0,0" VerticalAlignment="Top" Click="btBuy_product__Click"/>
+        <Button x:Name="btnUsePoints_" Content="use points " Margin="660,350,46,50" Click="btnUsePoints__Click"/>
+        <RichTextBox Margin="0,0,442,298">
             <FlowDocument>
                 <Paragraph>
-                    <Run x:Name="rbtDisplay"  Text="RichTextBox"/>
+                    <Run Text="the customer is never right  !! " FontSize="30"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>

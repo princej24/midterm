@@ -27,7 +27,8 @@ namespace midterm
             Random rand = new Random();
             _firstName = firstName;
             _lastName = lastName;
-            _memberNumber = rand.Next(100000, 100000).ToString();
+            _memberNumber = rand.Next(100000, 999999).ToString();
+
             _membersince = DateTime.Now;
             _points = 0;
             PreviousTransaction = new ObservableCollection<Product>();
@@ -35,6 +36,7 @@ namespace midterm
         //property
 
         public ObservableCollection<Product> PreviousTransaction1 { get => PreviousTransaction; }
+        protected  int Points { get => _points; set => _points = value; }
 
 
 
@@ -50,11 +52,12 @@ namespace midterm
         public void AddProduct(Product product)
         {
            PreviousTransaction.Add(product); 
+
         }
 
         public override string ToString()
         {
-            return $"{GetType().Name} -{_firstName}- {_lastName} - {_points} - {_memberNumber}";
+            return $"{GetType().Name} -{_firstName}- {_lastName} - point total {_points} - {_memberNumber}";
         }
 
 

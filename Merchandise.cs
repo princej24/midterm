@@ -11,5 +11,9 @@ namespace midterm
         public Merchandise(string name, double price, int points) : base(name, price, points)
         {
         }
+
+        public Merchandise(string name, double price, int points , string color) : base(name, price, points)
+        {
+        }
     }
 }

@@ -6,5 +6,59 @@
         xmlns:local="clr-namespace:midterm"
         mc:Ignorable="d"
         Title="AddProduct" Height="450" Width="800">
-    <Grid Background="#FFAB5FA7"/>
+    <Grid Background="#FF887D87">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="204*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="lbProducts" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="377,-2,6,130" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,32,0,0" Grid.Row="1" TextChanged="txtName_TextChanged"/>
+        <TextBox x:Name="txtPrice" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,83,0,0" Grid.Row="1"/>
+        <Label Content="Name" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="217,34,0,0" Grid.Row="1"/>
+        <Label Content="Price" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="216,79,0,0" Grid.Row="1"/>
+        <Label Content="points" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="211,126,0,0" Grid.Row="1"/>
+        <Button x:Name="btntestAddpd" Content="product " Click="btntestAddpd_Click" RenderTransformOrigin="0.507,0.667" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="656,337,0,0" Height="54" Width="128" Grid.Row="1"/>
+        <TextBox x:Name="txtPoints" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,128,0,0" Grid.Row="1"/>
+        <Canvas Background="#FFBAB1B1" Margin="1,158,424,0" Grid.Row="1">
+            <ComboBox x:Name="cbsize" Canvas.Left="4" Canvas.Top="6" Width="270" Height="38" RenderTransformOrigin="0.5,0.5">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+            </ComboBox>
+            <Button x:Name="btncoffee" Content="coffee" Canvas.Left="162" Canvas.Top="61" Height="45" Width="96" Click="btncoffee_Click"/>
+            <Button x:Name="btnTea" Content="tea" Canvas.Left="8" Canvas.Top="63" Height="45" Width="99" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnTea_Click"/>
+            <RadioButton x:Name="rbHeated" Content="is Heated" HorizontalAlignment="Left" Canvas.Left="19" Canvas.Top="139" VerticalAlignment="Top" RenderTransformOrigin="0.841,0.43" Checked="rbHeated_Checked">
+                <RadioButton.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF55FFFC" Offset="1"/>
+                    </LinearGradientBrush>
+                </RadioButton.Background>
+            </RadioButton>
+            <RadioButton x:Name="rbDairy_" Content="Has dairy" Canvas.Left="17" Canvas.Top="163">
+                <RadioButton.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF44CBC9" Offset="1"/>
+                    </LinearGradientBrush>
+                </RadioButton.Background>
+            </RadioButton>
+            <Button x:Name="btnLunch" Content="Lunch " Canvas.Left="21" Canvas.Top="197" Height="33" Width="82" Click="btnLunch_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnBreakfast" Content="Breakefast" Canvas.Left="126" Canvas.Top="199" Height="33" Width="72" Click="btnBreakfast_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="16" Canvas.Left="-8" Canvas.Top="117" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black">
+                <Border BorderBrush="Black" BorderThickness="1" Background="Black" Margin="-6,281,326,118"/>
+            </Border>
+        </Canvas>
+        <Canvas Grid.Row="1" Margin="381,294,155,3" Background="#FFBAB1B1">
+            <TextBox x:Name="txtColor" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="28" Width="120"/>
+            <Button x:Name="btnMug" Content="mug" Canvas.Left="2" Canvas.Top="67" Height="36" Width="116" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnMug_Click"/>
+            <Button x:Name="btnTumbler" Content="tumbler" Canvas.Left="147" Canvas.Top="65" Height="36" Width="115" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnTumbler_Click"/>
+            <Label Content="Color" Canvas.Left="38" Canvas.Top="23" RenderTransformOrigin="-0.652,0.136" HorizontalAlignment="Left" VerticalAlignment="Center" Width="55"/>
+        </Canvas>
+    </Grid>
 </Window>
