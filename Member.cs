@@ -9,13 +9,11 @@ namespace midterm
 {
     public abstract class Member
     {
-        //feilds 
-
-
-        string _firstName;
-        string _lastName;
+        //feilds. 
 
         string _memberNumber;
+        string _firstName;
+        string _lastName;
         int _points;
 
         DateTime _membersince = DateTime.Now;
